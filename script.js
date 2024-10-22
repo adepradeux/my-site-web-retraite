@@ -173,13 +173,13 @@ for (let i = 0; i <= long - 1; i++) {
 }
 
 //Importation des données des fichiers .csv pour les calculettes et les tableaux historique de données
-fetch("./Parametres/Param_trim.csv")   // fetch permet d'accéder à des ressources sur le réseau : dans ce cas accès au fichier.csv du dossier - fetch renvoie une promise
+fetch("./Parametres/param_trim.csv")   // fetch permet d'accéder à des ressources sur le réseau : dans ce cas accès au fichier.csv du dossier - fetch renvoie une promise
    .then(response => response.text())
    .then((response) => {
        ExtractData (response, tabFinal)
    })
  
-fetch("./Parametres/Param_points.csv")   // penser à initialiser un array
+fetch("./Parametres/param_points.csv")   // penser à initialiser un array
     .then(response => response.text())
     .then((response) => {
         ExtractData (response, tabFinalPoints)
