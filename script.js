@@ -173,53 +173,53 @@ for (let i = 0; i <= long - 1; i++) {
 }
 
 //Importation des données des fichiers .csv pour les calculettes et les tableaux historique de données
-fetch("./Parametres/param_trim.csv")   // fetch permet d'accéder à des ressources sur le réseau : dans ce cas accès au fichier.csv du dossier - fetch renvoie une promise
+fetch("./Parametres/Param_trim.csv")   // fetch permet d'accéder à des ressources sur le réseau : dans ce cas accès au fichier.csv du dossier - fetch renvoie une promise
    .then(response => response.text())
    .then((response) => {
        ExtractData (response, tabFinal)
    })
  
-fetch("./Parametres/param_points.csv")   // penser à initialiser un array
+fetch("./Parametres/Param_points.csv")   // penser à initialiser un array
     .then(response => response.text())
     .then((response) => {
         ExtractData (response, tabFinalPoints)
     })   
 
-fetch("./Parametres/param_age_trim.csv")   // penser à initialiser un array
+fetch("./Parametres/Param_age_trim.csv")   // penser à initialiser un array
 .then(response => response.text())
 .then((response) => {
     ExtractData (response, tabFinalAgeTrim)
 }) 
 
-fetch("./Parametres/param_historique_age.csv")   
+fetch("./Parametres/Param_historique_age.csv")   
    .then(response => response.text())
    .then((response) => {
        ExtractData (response, tabFinalAge);
        GenerateTable (tabFinalAge,"age")
    })
 
-fetch("./Parametres/param_historique_sam.csv")   
+fetch("./Parametres/Param_historique_sam.csv")   
     .then(response => response.text())
     .then((response) => {
         ExtractData (response, tabFinalSam);
         GenerateTable (tabFinalSam,"sam")
     })
 
-fetch("./Parametres/param_historique_decote.csv")   
+fetch("./Parametres/Param_historique_decote.csv")   
 .then(response => response.text())
 .then((response) => {
     ExtractData (response, tabFinalDecote);
     GenerateTable (tabFinalDecote,"decote")
 })    
 
-fetch("./Parametres/param_historique_tx-appel-arrco.csv")   
+fetch("./Parametres/Param_historique_tx-appel-arrco.csv")   
 .then(response => response.text())
 .then((response) => {
     ExtractData (response, tabFinalTxAppelArrco);
     GenerateTable (tabFinalTxAppelArrco,"tx-appel-arrco")
 })  
 
-fetch("./Parametres/param_historique_revalo.csv")   
+fetch("./Parametres/Param_historique_revalo.csv")   
 .then(response => response.text())
 .then((response) => {
     ExtractData (response, tabFinalRevalo);
