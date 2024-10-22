@@ -1,0 +1,745 @@
+
+:root {
+    --couleur-principale-txt : #ccc;
+    --couleur-background-orange : rgb(189, 155, 43);
+    --couleur-background-titre : #008171;/*rgb(59, 11, 59);*/
+    --couleur-background-valeur : #008171;/*#6c3a6b;*/
+    --couleur-tableau-head : rgb(90, 124, 120);/*#ac6eab;*/
+    --couleur-tableau-ligne : #b3aa99;/*#c7a1c6;*/
+    --couleur-txt-select : #ffeecb;
+    --couleur-txt-gris : rgb(53, 46, 46);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color:var(--couleur-principale-txt);
+    background-color:#333;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.no-overflow {
+    overflow: hidden;
+}
+
+#conteneur-gauche {
+   
+    top: 30px;
+    
+    overflow-y: auto;
+    position: sticky;
+    height: 100vh;
+   
+    overflow-y: scroll; 
+}
+
+#conteneur-menu {
+    display: flex;
+    flex-direction: column;
+    margin : 20px;
+}
+
+
+.titre {
+    /*flex: 1;*/
+    background-color:  var(--couleur-background-titre); /*#6c3a6b*/
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-principale-txt);
+}
+
+#conteneur-menu-calculette, #conteneur-menu-historique {
+    margin: 40px 20px 10px 20px;
+}
+
+#titre-menu-calculette, #titre-menu-historique{
+    font-size: 25px;
+    margin: 10px 0px 10px 0px;
+}
+
+#menu-calculette, #menu-historique {
+    display: flex;
+    flex-direction: column;
+}
+
+#page-principale {
+    display: flex;
+    margin : 0px;
+}
+
+#bloc-gauche {
+    margin : 0px 10px 10px 0px;
+    width: 25%;
+    background-color: #403f3f;
+    
+   
+}
+
+.sous-titre {
+    text-align: center;
+    font-size: 20px;
+}
+
+#bloc-droit {
+    margin : 10px;
+    width: 75%;
+}
+
+.regime {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--couleur-background-orange);
+    text-align: center;
+    font-size: 25px;
+    color: rgb(53, 46, 46);
+    transition: 0.3s;
+    
+}
+
+.regime:hover {
+    cursor:pointer;
+    transform:scale(1.03);
+    /*color:#ffeecb;*/
+}
+
+
+
+.bloc-regime{
+    
+    margin : 25px 10px 10px 10px;
+    border-radius: 5px;
+    border-color: var(--couleur-principale-txt);
+    /*background-color: #5e4f5d;*/
+}
+
+.titre-regime {
+    margin : 30px 0px 0px 0px;
+    border-radius: 5px;
+    background-color: var(--couleur-background-orange);
+    text-align: center;
+    font-size: 30px;
+    color: var(--couleur-txt-select); /*rgb(53, 46, 46)*/
+}
+
+.conteneur-valeur {
+    display: flex;
+    margin: 20px 0px 0px 0px;
+    
+}
+
+.txt-valeur {
+    margin: 2px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: var(--couleur-background-valeur);
+    
+}
+
+.valeur {
+    margin: 2px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: var(--couleur-background-valeur);
+}
+
+#lien-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-liste {
+    margin: 5px 5px 5px 15px;
+    width: 32px;
+}
+
+#img-info {
+    margin: 5px 5px 5px 5px;
+    position: relative;
+    bottom: 0px;
+    width: 27px;
+    cursor:pointer;
+    transform: translate(3px, 4px);
+    
+}
+
+.date-valeur {
+    font-style: italic;
+    margin: 0px 0px 0px 20px;
+    color: #888787;
+}
+
+.txt-parentheses {
+    font-size: 18px;
+    font-style: italic;
+}
+
+table {
+    margin: 5px;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: var(--couleur-principale-txt);
+}
+
+thead {
+    background-color: var(--couleur-tableau-head) ; 
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+}
+
+#ligne1 {
+  background-color: var(--couleur-tableau-ligne);
+  color: var(--couleur-txt-gris);
+  /*444242*/
+}
+
+#ligne2, .ligne {
+    background-color: var(--couleur-tableau-ligne);
+    color: var(--couleur-txt-gris);
+  }
+
+.exposant {
+    font-size: 14px;
+    vertical-align: super;
+}
+
+.commentaire {
+    margin: 10px;
+    color: #888787;
+    
+}
+
+.bloc-vide-regimes {
+    height: 100px;
+}
+
+.bloc-vide-calculettes {
+    height: 100px;
+}
+
+.bloc-vide-historique {
+    height: 700px;
+}
+
+.bloc-calculatrices {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#calculette-trim, #calculette-pts, #calculette-cnavpl, #calculette-sam, #calculette-age {
+    margin: 10px;
+    padding: 10px;
+    /*background-color: var(--couleur-tableau-ligne);*/
+    text-align: center;
+    width: 800px;
+}
+
+#conteneur-calculatrice {
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+}
+
+.info-calculette {
+    background-color: var(--couleur-background-titre);
+    padding : 10px;
+    margin: 5px 0px 10px 0px;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.conteneur-saisie {
+    display: flex;
+    margin: 5px 0px 0px 0px; 
+    align-items: center; 
+    
+}
+
+.conteneur-saisie-choix {
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    margin: 0px 0px 10px 0px; 
+    
+    
+}
+
+.titre-calculatrice {
+    margin: 0px 0px 10px 0px;
+    padding : 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: var(--couleur-txt-select);
+    text-align: center;
+    background-color: var(--couleur-background-orange ) ;
+}
+
+.titre-saisie {
+    padding : 10px;
+    /*color: var(--couleur-txt-select); /*var(--couleur-txt-gris);*/
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.titre-saisie-age {
+    padding : 5px;
+    /*color: var(--couleur-txt-select); /*var(--couleur-txt-gris);*/
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#titre-enfants {
+    font-style: italic;
+    margin : 10px 5px 5px 5px;
+}
+
+#conteneur-gauche-calculatrice {
+    width: 330px;
+    margin: 0px 5px 0px 0px ;
+    padding : 10px;
+    border-radius: 5px;
+    color : var(--couleur-principale-txt);
+    background-color:var(--couleur-background-valeur); /*var(--couleur-background-valeur); #3f3d3fa2*/
+}
+
+#conteneur-gauche-calculatrice-age {
+    width: 400px;
+    margin: 0px 5px 0px 0px ;
+    padding : 10px;
+    border-radius: 5px;
+    color : var(--couleur-principale-txt);
+    background-color:var(--couleur-background-valeur); /*var(--couleur-background-valeur); #3f3d3fa2*/
+}
+
+#conteneur-droite-calculatrice {
+    width: 470px;
+    margin: 0px 0px 0px 5px;
+    padding : 10px;
+    border-radius: 5px;
+    color : var(--couleur-principale-txt);
+    background-color:var(--couleur-background-valeur); /*var(--couleur-background-valeur); #3f3d3fa2*/
+}
+
+#conteneur-droite-calculatrice-age {
+    visibility: hidden;
+    width: 400px;
+    height: 70%;
+    margin: 0px 0px 0px 5px;
+    padding : 10px;
+    border-radius: 5px;
+    color : var(--couleur-principale-txt);
+    background-color:var(--couleur-background-valeur); /*var(--couleur-background-valeur); #3f3d3fa2*/
+}
+
+#conteneur-droite-age-legal {
+    visibility: hidden;
+    width: 400px;
+    height: 30%;
+    margin: 0px 0px 10px 5px;
+    padding : 0px 10px 10px 10px;
+    border-radius: 5px;
+    color : var(--couleur-principale-txt);
+    background-color:var(--couleur-background-valeur); /*var(--couleur-background-valeur); #3f3d3fa2*/
+ 
+}
+
+#conteneur-droite-global {
+    display: flex;
+    flex-direction: column;
+}
+
+#saisie-DDN-age, #saisie-date-depart, #saisie-date-depart-libre, #saisie-date-depart-tx-plein, #saisie-date-retraite-sam {
+    font-size: 15px;
+}
+
+#saisie-date-depart, #saisie-date-depart-tx-plein, #saisie-date-depart-libre {
+    margin: 0px 0px 0px 15px;
+    visibility: hidden;
+}
+
+.saisie-annee, #saisie-salaire, #saisie-salaire-arrco, #saisie-nb-mois, #saisie-salaire-cnavpl, #saisie-salaire-sam, #saisie-trim-sam {
+    padding: 3px;
+    font-size: 20px;
+    background-color: var(---couleur-background-valeur);
+    color : var(--couleur-principale-txt);
+    border-style:solid;
+    border-radius: 5px;
+    border-color: #01574d; /*#757573;*/
+    border-width: 1px;
+    transition: 0.4s;
+}
+
+#saisie-nb-mois, #saisie-annee-trim, #saisie-annee-fin-trim {
+    margin-top: 3px;
+    text-align: center;
+    
+}
+
+.saisie-annee:hover, #saisie-salaire:hover, #saisie-salaire-arrco:hover, #saisie-nb-mois:hover, #saisie-salaire-cnavpl:hover, #saisie-salaire-sam:hover, #saisie-trim-sam:hover {
+    border-color: #f5f5f0;
+}
+
+.saisie-annee:focus, #saisie-salaire:focus, #saisie-salaire-arrco:focus, #saisie-nb-mois:focus, #saisie-salaire-cnavpl:focus, #saisie-salaire-sam:focus, #saisie-trim-sam:focus {
+    outline: px solid var(--couleur-background-orange);
+    border: 1.2px solid var(--couleur-background-orange);
+}
+
+/*#saisie-annee:active, #saisie-salaire:active {
+    border-color: #26e41f;
+}*/
+
+.monnaie-symbole {
+  font-size: 23px;
+  
+}
+
+#monnaie-symbole-saisie, #monnaie-symbole-saisie-arrco, #monnaie-symbole-saisie-cnavpl, #monnaie-symbole-saisie-sam {
+    margin: 0px 0px 0px 4px;
+}
+
+#monnaie-symbole-resultat {
+    margin: 0px 0px 0px 3px;
+}
+
+
+#conteneur-monnaie {
+    display: flex;
+    align-items: center;
+}
+
+.conteneur-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    margin: 5px 25px 5px 25px;
+
+}
+
+.checkbox-choix {
+    display: flex;
+    align-items: center;
+    margin: 0px 25px 5px 25px;
+
+}
+
+.label-choix {
+    font-size: 17px;
+}
+
+#conteneur-resultat1 {
+    padding : 10px;
+    font-size: 24px;    
+}
+
+#conteneur-resultat-age {
+    display: flex;
+    padding : 5px;
+    font-size: 24px;    
+    align-items: baseline;
+}
+
+#conteneur-minoration {
+    font-size: 20px;
+    font-style: italic;
+    display: none;
+    margin: 10px;
+}
+
+#conteneur-majoration {
+    font-size: 20px;
+    font-style: italic;
+    display: block;
+    margin: 10px;
+}
+
+#conteneur-resultat-age-legal {
+    display: flex;
+    padding : 0px;
+    font-size: 24px;    
+    align-items: baseline;
+}
+
+#titre-nb-mois {
+    margin: 5px 0px 0px 0px;
+}
+
+#conteneur-titre-resultat1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titre-resultat-age {
+    font-size: 20px;
+}
+
+.info-age {
+   
+    transform: translate(5px, 6px);
+}
+
+
+#conteneur-info span {
+    position: absolute;
+    padding: 3px;
+    opacity: 0;
+    font-size: 18px;
+    color: #333;
+    background-color: rgb(189, 155, 43);
+    border-radius: 5px;
+    width: 200px;
+    margin: 35px 0px 0px 0px;
+}
+
+
+
+#img-info:hover + .info-span {
+    position: absolute;
+    opacity: 1;
+    z-index: 10;
+}
+
+#resultat-trim, #resultat-agirc-arrco, #resultat-sam, #monnaie-symbole-resultat-sam {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#monnaie-symbole-resultat-sam {
+    margin: 0px 0px 0px 5px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.resultat-age {
+    margin :0px 0px 0px 5px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.resultat-age-info {
+    margin :0px 0px 0px 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#vide {
+    width: 190px;
+}
+
+#conteneur-resultat2 {
+    margin: 0px;
+    padding : 5px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#conteneur-resultat-ARRCO {
+    margin: 0px;
+    padding : 5px;
+    font-size: 20px;
+    font-style: italic;
+    color: #929292;
+}
+
+
+#conteneur-valeur-resultat2 {
+    display: flex;
+    justify-content:center;
+    
+}
+
+#conteneur-valeur-ARRCO {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    
+}
+
+#calculette-pts, #calculette-cnavpl {
+    margin-top: 50px;
+}
+
+#checkbox-cadre {
+    margin : 5px
+}
+
+#points-ARRCO, #points-AGIRCTB, #points-AGIRCTC {
+    margin: 3px;
+    font-weight: bold;
+}
+
+#choix-arrco-ircantec {
+    display: flex;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--couleur-background-titre) ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.label {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+    background-color: #01584ec4;
+}
+
+
+.checkbox-toggle {
+    width: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+.label:after {
+    content: "";
+    height: 18px;
+    width: 35px;
+    background-color: #ccc;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.checkbox-toggle:checked + label:after {
+    transform: translate(65px);
+    transition: 0.3s;
+}
+
+#choix-arrco-ircantec:focus-within label {
+    outline: 3px solid var(--couleur-background-orange);
+}
+
+.choix-toggle {
+    margin: 10px;
+    font-size: 22px;
+    color: #b3aa99;
+}
+
+#choix-toggle-agirc-arrco {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ccc ;
+}
+
+.conteneur-table-historique {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-historique {  
+    margin: 20px;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: var(--couleur-principale-txt);
+}
+
+.table-head {
+    background-color: var(--couleur-background-valeur);
+    
+}
+
+.table-ligne {
+    background-color: var(--couleur-tableau-ligne);
+    color: var(--couleur-txt-gris);
+    
+  }
+
+.titre-table {
+    margin: 20px 10px 0px 10px;
+    padding : 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: var(--couleur-txt-select);
+    text-align: center;
+    background-color: var(--couleur-background-orange ) ;
+}
+
+.sous-texte {
+    font-size: 17px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+#bouton-salaire-sam {
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+    width: 135px;
+    border-radius: 5px;
+    border: 2px;
+    font-size: 18px;
+    text-align: center;
+    
+    color: var(--couleur-txt-select);
+    background-color: var(--couleur-background-orange ) ;
+    position: relative;
+    left : 150px;
+    transition: 0.3s;
+}
+
+#bouton-salaire-sam:hover {
+    cursor:pointer;
+    transform:scale(1.04);
+}
+
+#bouton-salaire-sam:active {
+    cursor:pointer;
+    transform:scale(0.9);
+}
+
+#bouton-reinitialiser {
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+    width: 105px;
+    border-radius: 5px;
+    border: 2px;
+    font-size: 18px;
+    text-align: center;
+    
+    color: var(--couleur-txt-gris);
+    background-color: var(--couleur-tableau-ligne);
+    position: relative;
+    right : 150px;
+    transition: 0.3s;
+}

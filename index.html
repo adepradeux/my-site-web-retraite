@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="styles.css" rel="stylesheet">
+    
+    <title>Chiffre-clés des régimes de retraite - Historique des paramètres </title>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+     <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+    
+  </head>
+  
+  <body>
+   
+    <div id="page-principale">
+        <div id="bloc-gauche">
+          <div id="conteneur-gauche">
+            <div class="titre">
+              <a href="index.html">La retraite en chiffres<br><span class="sous-titre">Paramètres par régimes et historique</span></a>
+            </div> 
+            <div id="conteneur-menu">
+                <!--<a class = "regime" id = "lien-agirc-arrco" href="#agirc-arrco">Agirc-Arrco</a>
+                <a class = "regime" href="#RG">Régime Général</a>
+                <a class = "regime" id="lien-ircantec" href="#ircantec">IRCANTEC</a>
+                <a class = "regime" href="#cnavpl">CNAVPL</a>-->
+            </div> 
+            <div id="conteneur-menu-calculette">
+              <div class="titre" id="titre-menu-calculette">
+                <a href="#titre-bloc-calculatrices">Calculatrices</a>
+              </div>
+              <div id="menu-calculette">
+                <a class = "regime" id="lien-calculette-age" href="#calculette-age-depart">
+                  Calcul Age de départ
+                </a>
+                <a class = "regime" id="lien-calculette-trim" href="#calculette-trim">
+                  Calculette Trimestres
+                </a>
+                <a class = "regime" id="lien-calculette-pts" href="#calculette-pts">
+                  Calculette Agirc-Arrco
+                </a>
+                <a class = "regime" id="lien-calculette-cnavpl" href="#calculette-cnavpl">
+                  Calculette Cnavpl
+                </a>
+                <a class = "regime" id="lien-calculette-sam" href="#calculette-sam">
+                  Calculette SAM
+                </a>
+              </div>
+            </div>
+            <div id="conteneur-menu-historique">
+              <div class="titre" id="titre-menu-historique">
+                <a href="#titre-bloc-historique">Historique des données</a>
+              </div>
+              <div id="menu-historique">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="bloc-droit">
+           <!--BLOC REGIME GENERAL-->
+           <div class = "bloc-regime" id = "Régime Général">
+              <div class="titre-regime">
+                Régime Général
+              </div>
+              <!--Plafond mensuel-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Salaire mensuel plafond soumis à cotisation
+                </div>
+                <div class="valeur">
+                  3 864 €
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/bareme?file_leaf_ref=salaire_plafond_soumis_cotisation_bar.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>
+           
+              <!--Plafond anuuel-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Salaire annuel plafond soumis à cotisation
+                </div>
+                <div class="valeur">
+                  46 368 €
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/bareme?file_leaf_ref=salaire_plafond_soumis_cotisation_bar.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>
+
+              <!--dernière revalorisation-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Dernière revalorisation
+                </div>
+                <div class="valeur">
+                  5,30 %
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/bareme?file_leaf_ref=revalorisation_coefficient_revalorisation_retraite_bar.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                Au 01/01/2024
+              </div> 
+
+              <!--salaire pour valider 1 trim-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Salaire permettant de valider 1 trimestre <span class="txt-parentheses">(Smic calculé sur 150h)</span> 
+                </div>
+                <div class="valeur">
+                  1 747,50 €
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/bareme?file_leaf_ref=salaire_validant_un_trimestre_montant_bar.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                Au 01/01/2024
+              </div> 
+
+              <!--Taux cotisation-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Taux de cotisation
+                </div>
+                
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/bareme?file_leaf_ref=cotisation_salaire_taux_cotisation_droit_commun_bar.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Assiette</th>
+                    <th scope="col">Employeur</th>
+                    <th scope="col">Salarié</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tr id="ligne1">
+                  <th scope="row">Salaire limité au plafond</th>
+                  <td>8,55%</td>
+                  <td>6,90%</td>
+                  <td>15,45%</td>
+                </tr>
+                <tr id="ligne2">
+                  <th scope="row">Totalité du salaire</th>
+                  <td>2,02%</td>
+                  <td>0,40%</td>
+                  <td>2,42%</td>
+                </tr>
+              </table>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>
+
+              <!--Age legal-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Age légal de départ en retraite
+                </div>
+                <div class="valeur">
+                  64 ans
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/expose?file_leaf_ref=retraite_personnelle_age_retraite_ex.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              
+              <div class="date-valeur">
+                Fixé à 64 ans pour les assurés nés à compter de 1968. Pour les retraites attribuées à partir du 01/09/2023, l'âge légal passe progressivement de 62 à 64 ans selon l'année de naissance de l'assuré.
+                <span><a href="#titre-table-age">En détail</a></span>
+              </div>
+
+               <!--Durée assurance Taux plein-->
+               <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Durée d'assurance requise pour le taux plein
+                </div>
+                <div class="valeur">
+                  172 trimestres
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/expose?file_leaf_ref=retraite_personnelle_taux_duree_assurance_pour_taux_plein_ex.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              
+              <div class="date-valeur">
+                Fixée à 172 pour les assurés nés à compter de 1968. Pour les retraites attribuées à partir du 01/09/2023, la durée requise passe progressivement de 168 à 172 selon l'année de naissance de l'assuré.
+                <span><a href="#titre-table-age">En détail</a></span>
+              </div>
+
+              <!--Minoration RG-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Decote sur le montant de la retraite
+                </div>
+                <div class="valeur">
+                  1,25% par trimestre manquant
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/expose?file_leaf_ref=retraite_personnelle_taux_duree_assurance_pour_taux_plein_ex.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              
+              <div class="date-valeur">
+                Pour les assurés nés à compter de 1953.
+              </div>
+
+              <!--Retraite de réversion -->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Retraite de réversion
+                </div>
+                
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/expose?file_leaf_ref=retraite_reversion_montant_montant_ex.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+
+              <table>
+               
+                <tr id="ligne1">
+                  <th scope="row">Taux d'attribution <span class="exposant"> (1)</span></th>
+                  <td>54 %</td>
+                </tr>
+                <tr id="ligne2">
+                  <th scope="row">Condition d'âge</th>
+                  <td>55 ans</td> 
+                </tr>
+                <tr class = "ligne" id="ligne3">
+                  <th scope="row">Bénéficiaires</th>
+                  <td>Conjoints et ex-conjoints <span class="exposant"> (2)</span> </td> 
+                </tr>
+                <tr class = "ligne" id="ligne4">
+                  <th scope="row">Condition durée de mariage</th>
+                  <td>NON</td> 
+                </tr>
+                <tr class = "ligne" id="ligne4">
+                  <th scope="row">Conditions de ressource</th>
+                  <td>24 232 € annuel</td> 
+                </tr>
+              </table>
+              
+              <div class="date-valeur">
+                <span class="exposant"> (1)</span>Taux appliqué au montant de la retraite personnelle dont bénéficiait ou aurait bénéficié l'assuré décédé.<br>
+                <span class="exposant"> (2)</span>Le remariage ne s'oppose pas à l'attribution de la retraite de réversion. S'il existe plusieurs bénéficiaires, la retraite de réversion est partagée entre les conjoints et ex-conjoints au prorata de la durée de mariage. 
+              </div>
+
+            
+
+              <!--Minimum-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Minimum contributif pour une retraite à taux plein
+                </div>
+                
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/expose?file_leaf_ref=retraite_personnelle_minimum_contributif_minimum_contributif_depuis_2012_ex.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Catégorie</th>
+                    <th scope="col">Mensuel</th>
+                    <th scope="col">Annuel</th>
+                    
+                  </tr>
+                </thead>
+                <tr id="ligne1">
+                  <th scope="row">Minimum contributif</th>
+                  <td>733,03 €</td>
+                  <td>8 796,38 €</td>
+                 
+                </tr>
+                <tr id="ligne2">
+                  <th scope="row">Minimum contributif majoré</th>
+                  <td>876,13 €</td>
+                  <td>10 513,61 €</td>
+                  
+                </tr>
+              </table>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>
+
+              <!--Plafond pour minimum-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Plafond des retraites pour l'attribution du minimum contributif
+                </div>
+                <div class="valeur">
+                  1 367,51 €
+                </div>
+                <a id="lien-image" href="https://legislation.lassuranceretraite.fr/#/bareme?file_leaf_ref=retraite_personnelle_minimum_plafond_retraite_bar.aspx" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>
+
+           </div>
+          
+          <!--BLOC AGIRC-ARRCO-->
+          <div class = "bloc-regime" id = "Agirc-Arrco">
+              <div class="titre-regime">
+                Agirc-Arrco
+              </div>
+              <!--Valeur du point-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Valeur du point
+                </div>
+                <div class="valeur">
+                  1,4385 €
+                </div>
+                <a id="lien-image" href="https://www.agirc-arrco.fr/wp-content/uploads/2023/06/Compilation_valeurs_de_point_novembre_2023.pdf" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                A compter du 01/11/2024
+              </div>
+
+              <!--salaire de référence-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Salaire de référence
+                </div>
+                <div class="valeur">
+                  19,6321 €
+                </div>
+                <a id="lien-image" href="https://www.agirc-arrco.fr/wp-content/uploads/2023/06/Compilation_valeurs_de_point_novembre_2023.pdf" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>  
+
+              <!--dernière revalorisation-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Dernière revalorisation
+                </div>
+                <div class="valeur">
+                  1,60 %
+                </div>
+                <a id="lien-image" href="https://www.agirc-arrco.fr/wp-content/uploads/2023/06/Compilation_valeurs_de_point_novembre_2023.pdf" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                Au 01/11/2024
+              </div>  
+
+              <!--taux de cotisation-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Taux de cotisation appelé <span class="txt-parentheses">(inclut le pourcentage d'appel de 127 %)</span>
+                </div>
+                
+                <a id="lien-image" href="https://www.agirc-arrco.fr/wp-content/uploads/2023/06/Compilation_valeurs_de_point_novembre_2023.pdf" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Assiette</th>
+                    <th scope="col">Employeur (60%)</th>
+                    <th scope="col">Salarié (40%)</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tr id="ligne1">
+                  <th scope="row">T1</th>
+                  <td>4,72%</td>
+                  <td>3,15%</td>
+                  <td>7,87%</td>
+                </tr>
+                <tr id="ligne2">
+                  <th scope="row">T2</th>
+                  <td>12,95%</td>
+                  <td>8,64%</td>
+                  <td>21,59%</td>
+                </tr>
+              </table>
+
+              <div class="date-valeur">
+                Depuis le 01/01/2019
+              </div> 
+
+               <!--Retraite de réversion agirc-arrco -->
+               <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Retraite de réversion Agirc-Arrco
+                </div>
+                
+                <a id="lien-image" href="https://www.agirc-arrco.fr/particuliers/ma-retraite/demander-ma-retraite/la-pension-de-reversion/" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+
+              <table>
+               
+                <tr id="ligne1">
+                  <th scope="row">Taux d'attribution <span class="exposant"> (1)</span></th>
+                  <td>60 %</td>
+                </tr>
+                <tr id="ligne2">
+                  <th scope="row">Condition d'âge <span class="exposant"> (2)</span></th>
+                  <td>55 ans</td> 
+                </tr>
+                <tr class = "ligne" id="ligne3">
+                  <th scope="row">Bénéficiaires</th>
+                  <td>Conjoints et ex-conjoints non remariés <span class="exposant"> (3)</span> </td> 
+                </tr>
+                <tr class = "ligne" id="ligne4">
+                  <th scope="row">Condition durée de mariage</th>
+                  <td>NON</td> 
+                </tr>
+                <tr class = "ligne" id="ligne4">
+                  <th scope="row">Conditions de ressource</th>
+                  <td>NON</td> 
+                </tr>
+              </table>
+              
+              <div class="date-valeur">
+                <span class="exposant"> (1)</span>Taux appliqué au montant de la retraite personnelle dont bénéficiait ou aurait bénéficié l'assuré décédé.<br>
+                <span class="exposant"> (2)</span>Condition d'âge à 60 ans pour l'Agirc si le décès est intervenu avant le 01/01/2019.<br>
+                <span class="exposant"> (3)</span>S'il existe plusieurs bénéficiaires, la retraite de réversion est partagée entre les conjoints et ex-conjoints non remariés au prorata de la durée de mariage.
+              </div>
+            
+
+              <!--minoration age legal-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Minoration sur le montant de la retraite - départ à partir de l'âge légal 
+                </div>
+                
+                <a id="lien-image" href="https://www.agirc-arrco.fr/ma-retraite/demander-ma-retraite/conditions-douverture-de-mes-droits/" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <td >Nombre de trimestres manquants pour atteindre le taux plein</td>
+                    <td>Minoration par trimestre</td>
+                  </tr>
+                </thead>
+                <tr id="ligne1">
+                  <td >Du 1er trimestre au 12ème trimestre</td>
+                  <td>1 % / trim</td>
+                </tr>
+                <tr id="ligne2">
+                  <td >Du 13ème trimestre au 20ème trimestre</td>
+                  <td>1,25 % / trim</td>
+                </tr>
+              </table>
+              
+              <!--minoration retraite prog-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Minoration sur le montant de la retraite - retraite progressive
+                </div>
+                <a id="lien-image" href="https://www.agirc-arrco.fr/wp-content/uploads/2023/06/Agirc-Arrco_2024-2-drj.pdf" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="commentaire">
+                Il existe des coefficients spécifiques en fonction de l'âge atteint et de la durée d'assurance validée.<br>
+                <span class="txt-parentheses"> Exemple pour un départ en retraite progressive à 62 ans en 2024 :</span>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <td >Nombre de trimestres manquants pour atteindre le taux plein</td>
+                    <td>Minoration par trimestre</td>
+                  </tr>
+                </thead>
+                <tr id="ligne1">
+                  <td >Du 1er trimestre au 4ème trimestre</td>
+                  <td>2,70 % / trim</td>
+                </tr>
+                <tr id="ligne2">
+                  <td >Du 5ème trimestre au 20ème trimestre</td>
+                  <td>de 1,6 % à 0,6% / trim</td>
+                </tr>
+              </table>
+             
+          </div>
+
+          <!--BLOC IRCANTEC-->
+          <div class = "bloc-regime" id="Ircantec">
+              <div class="titre-regime">
+                Ircantec
+              </div>
+              <!--Valeur du point-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Valeur du point
+                </div>
+                <div class="valeur">
+                  0,54357 €
+                </div>
+                <a id="lien-image" href="https://www.ircantec.retraites.fr/retraite/valeur-point" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>
+
+              <!--salaire de référence-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Salaire de référence
+                </div>
+                <div class="valeur">
+                  5,611 €
+                </div>
+                <a id="lien-image" href="https://www.ircantec.retraites.fr/employeur/parametres-utilises-ircantec" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                A compter du 01/01/2024
+              </div>  
+
+              <!--dernière revalorisation-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Dernière revalorisation
+                </div>
+                <div class="valeur">
+                  5,3 %
+                </div>
+                <a id="lien-image" href="https://www.ircantec.retraites.fr/retraite/valeur-point" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <div class="date-valeur">
+                Au 01/01/2024
+              </div>  
+
+              <!--taux de cotisation-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Taux de cotisation appelé <span class="txt-parentheses">(inclut le pourcentage d'appel de 125 %)</span>
+                </div>
+                
+                <a id="lien-image" href="https://www.ircantec.retraites.fr/employeur/parametres-utilises-ircantec" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Tranche</th>
+                    <th scope="col">Employeur (60%)</th>
+                    <th scope="col">Salarié (40%)</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tr id="ligne1">
+                  <th scope="row">T1</th>
+                  <td>4,20%</td>
+                  <td>2,80%</td>
+                  <td>7,00%</td>
+                </tr>
+                <tr id="ligne2">
+                  <th scope="row">T2</th>
+                  <td>12,55%</td>
+                  <td>6,95%</td>
+                  <td>19,50%</td>
+                </tr>
+              </table>
+
+              <div class="date-valeur">
+                Depuis le 01/01/2019
+              </div> 
+
+              <!--Retraite de réversion Ircantec -->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Retraite de réversion Ircantec
+                </div>
+                
+                <a id="lien-image" href="https://www.ircantec.retraites.fr/deces/pension-reversion" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+
+              <table>
+              
+                <tr id="ligne1">
+                  <th scope="row">Taux d'attribution <span class="exposant"> (1)</span></th>
+                  <td>50 %</td>
+                </tr>
+                <tr id="ligne2">
+                  <th scope="row">Condition d'âge</th>
+                  <td>50 ans</td> 
+                </tr>
+                <tr class = "ligne" id="ligne3">
+                  <th scope="row">Bénéficiaires</th>
+                  <td>Conjoints et ex-conjoints non remariés <span class="exposant"> (2)</span> </td> 
+                </tr>
+                <tr class = "ligne" id="ligne4">
+                  <th scope="row">Condition durée de mariage</th>
+                  <td>Au moins 4 ans ou 2 ans avant 55 ans <span class="exposant"> (3)</span> </td> 
+                </tr>
+                <tr class = "ligne" id="ligne4">
+                  <th scope="row">Conditions de ressource</th>
+                  <td>NON</td> 
+                </tr>
+              </table>
+
+              <div class="date-valeur">
+                <span class="exposant"> (1)</span>Taux appliqué au montant de la retraite personnelle dont bénéficiait ou aurait bénéficié l'assuré décédé.<br>            
+                <span class="exposant"> (2)</span>S'il existe plusieurs bénéficiaires, la retraite de réversion est partagée entre les conjoints et ex-conjoints non remariés au prorata de la durée de mariage.<br>
+                <span class="exposant"> (3)</span>durée de mariage de 2 ans requise si cette durée est intervenue avant les 55 ans du conjoint décédé<br>
+              </div>
+              
+              <!--minoration age legal-->
+              <div class = "conteneur-valeur">
+                <div class="txt-valeur">
+                  Minoration sur le montant de la retraite
+                </div>
+                
+                <a id="lien-image" href="https://www.ircantec.retraites.fr/actif/preparer-ma-retraite/conditions-depart-retraite" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <td >Nombre de trimestres manquants pour atteindre le taux plein</td>
+                    <td>Minoration par trimestre</td>
+                  </tr>
+                </thead>
+                <tr id="ligne1">
+                  <td >Du 1er trimestre au 12ème trimestre</td>
+                  <td>1 % / trim</td>
+                </tr>
+                <tr id="ligne2">
+                  <td >Du 13ème trimestre au 20ème trimestre</td>
+                  <td>1,25 % / trim</td>
+                </tr>
+              </table>
+
+          </div>
+
+          <!--BLOC CNAVPL-->
+          <div class = "bloc-regime" id = "CNAVPL">
+            <div class="titre-regime">
+              CNAVPL
+            </div>
+            <!--Valeur du point-->
+            <div class = "conteneur-valeur">
+              <div class="txt-valeur">
+                Valeur du point
+              </div>
+              <div class="valeur">
+                0,6399 €
+              </div>
+              <a id="lien-image" href="https://www.cnavpl.fr/comprendre-sa-retraite/" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+            </div>
+            <div class="date-valeur">
+              A compter du 01/01/2024
+            </div>
+         
+
+            <!--dernière revalorisation-->
+            <div class = "conteneur-valeur">
+              <div class="txt-valeur">
+                Dernière revalorisation
+              </div>
+              <div class="valeur">
+                5,30 %
+              </div>
+              <a id="lien-image" href="https://www.carmf.fr/page.php?page=actualites/divers/2024/asv-revalorisation.htm" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+            </div>
+            <div class="date-valeur">
+              Au 01/01/2024
+            </div> 
+
+
+            <!--Taux cotisation-->
+            <div class = "conteneur-valeur">
+              <div class="txt-valeur">
+                Taux de cotisation
+              </div>
+              
+              <a id="lien-image" href="https://www.cnavpl.fr/comprendre-sa-retraite/" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+            </div>
+            
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Assiette</th>
+                  <th scope="col">Taux</th>
+                  <th scope="col">Nombre max de point</th>
+                  
+                </tr>
+              </thead>
+              <tr id="ligne1">
+                <th scope="row">T1 : Revenu dans la limite du plafond</th>
+                <td>8,23%</td>
+                <td>525 points</td>
+                
+              </tr>
+              <tr id="ligne2">
+                <th scope="row">T2 : Revenu total dans la limite de 5 plafonds</th>
+                <td>1,87%</td>
+                <td>25 points</td>
+                
+              </tr>
+            </table>
+            <div class="date-valeur">
+              Depuis le 01/01/2004
+            </div>
+
+            <!--Retraite de réversion CNAVPL -->
+            <div class = "conteneur-valeur">
+              <div class="txt-valeur">
+                Retraite de réversion CNAVPL
+              </div>
+              
+              <a id="lien-image" href="https://www.cnavpl.fr/comprendre-sa-retraite/" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+            </div>
+
+            <table>
+
+              <tr id="ligne1">
+                <th scope="row">Taux d'attribution <span class="exposant"> (1)</span></th>
+                <td>54 %</td>
+              </tr>
+              <tr id="ligne2">
+                <th scope="row">Condition d'âge</th>
+                <td>55 ans</td> 
+              </tr>
+              <tr class = "ligne" id="ligne3">
+                <th scope="row">Bénéficiaires</th>
+                <td>Conjoints et ex-conjoints<span class="exposant"> (2)</span> </td> 
+              </tr>
+              <tr class = "ligne" id="ligne4">
+                <th scope="row">Condition durée de mariage</th>
+                <td>NON </td> 
+              </tr>
+              <tr class = "ligne" id="ligne4">
+                <th scope="row">Conditions de ressource</th>
+                <td>24 232 € annuel</td> 
+              </tr>
+            </table>
+
+            <div class="date-valeur">
+              <span class="exposant"> (1)</span>Taux appliqué au montant de la retraite personnelle dont bénéficiait ou aurait bénéficié l'assuré décédé.<br>            
+              <span class="exposant"> (2)</span>Le remariage ne s'oppose pas à l'attribution de la retraite de réversion. S'il existe plusieurs bénéficiaires, la retraite de réversion est partagée entre les conjoints et ex-conjoints non remariés au prorata de la durée de mariage.<br>
+            </div>
+
+            <!--minoration age legal-->
+            <div class = "conteneur-valeur">
+              <div class="txt-valeur">
+                Minoration sur le montant de la retraite
+              </div>
+              <div class="valeur">
+                1,25 % / trim manquant
+              </div>
+              <a id="lien-image" href="https://www.cnavpl.fr/comprendre-sa-retraite/" target="_blank"><img id = "img-liste"  src="Images\icone-liste.png" alt="Source et historique" title="Source et historique"/></a>
+            </div>
+            <div class="date-valeur">
+              Dans la limite de 20 trimestres
+            </div>
+         </div>
+
+         <!--BLOC VIDE-->
+         <div class="bloc-vide-regimes">
+
+         </div>
+
+         <!--CALCULATRICES-->
+         <div class="titre-regime" id="titre-bloc-calculatrices">
+          Calculatrices
+         </div>
+         <div class = "bloc-calculatrices">
+            
+             <!--Calculatrice Age de départ-->
+             <div class="calculette" id="calculette-age">
+              <div class = "titre-calculatrice" id="calculette-age-depart">
+                Calculette Age de départ
+              </div>
+              <div class="info-calculette">
+                Calcul de l'âge de départ, du nombre de trimestres validés au départ en retraite et du taux de minoration/majoration
+              </div>
+              
+              <div id = "conteneur-calculatrice">
+                <div id="conteneur-gauche-calculatrice-age">
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie-age">
+                     Date de naissance :
+                    </div>
+                    <input class="saisie-annee"   id="saisie-DDN-age" name="saisie-DDN-age" type="date" required minlength="4" maxlength="10" size="2" />
+                  </div>
+
+              
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie-age" id="titre-nb-trim">
+                      Nombre actuel de trimestres :
+                    </div>
+                    <input class="saisie-annee" id="saisie-nb-trim" name="saisie-nb-trim" required minlength="1" maxlength="3" size="4" />
+                  </div>
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie-age" id="titre-annee-trim">
+                      à la fin de l'année :
+                    </div>
+                    <input class="saisie-annee" id="saisie-annee-fin-trim" name="saisie-annee-trim" required minlength="4" maxlength="4" size="4" value="2023" />
+                  </div>
+
+                  <div class="titre-saisie-age" id="titre-enfants">
+                    - Trimestres pour enfants -
+                  </div>
+                  
+                  <div class="conteneur-checkbox">
+                    <div class="checkbox" >
+                      <input type="radio" id="femme" name="statut" value="femme" />
+                      <label id="label-cadre" for="femme">Femme</label>
+                    </div>
+                    <div class="checkbox" id = "checkbox-cadre">
+                      <input type="radio" id="homme" name="statut" value="homme" checked />
+                      <label id="label-cadre" for="homme">Homme</label>
+                    </div>  
+                  </div>
+                  <div class="conteneur-saisie">
+                    <div  class="titre-saisie-age" id="titre-nb-trim">
+                      Nombre d'enfants :
+                    </div>
+                    <input class="saisie-annee" id="saisie-nb-enfant" name="saisie-nb-trim" required minlength="1" maxlength="3" size="4"  />
+                  </div>
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie-age">
+                      Total trimestres enfants :
+                    </div>
+                    <input class="saisie-annee"  id="saisie-trim-enfant" name="saisie-date-depart" required minlength="1" maxlength="8" size="5" value = "0"/>
+                    
+
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Pour les enfants nés avant 2010, 8 trimestres par enfant sont attribués à la mère. Pour les enfants nés après 2010, 4 trimestres
+                         sont attribués à la mère, les 4 autres trimestres peuvent être partagés entre les parents selon leur choix qui doit intervenir avant le 4ème anniversaire de l'enfant. A défaut, les trimestres sont attribués à la mère. </span>
+                    </div>
+                  </div>     
+                  
+                  <div class="titre-saisie-age" id="titre-enfants">
+                    - Date de retraite -
+                  </div>
+                  
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie-age">
+                      Choix de la date de retraite :
+                    </div>
+                    
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Choisissez la date à laquelle vous envisagez de prendre votre retraite, au plus tôt à l'âge légal de retraite. La retraite intervient le 1er jour d'un mois : 01/10/2025, 01/02/2026....</span>
+                    </div>
+                  </div> 
+                    
+                  <div class="conteneur-saisie-choix">
+                      <div class="checkbox-choix">
+                        <input type="radio" id="choix-date-legale" name="choix-date-age" value="tot" />
+                        <label class="label-choix" for="choix-date-tot">Au plus tôt</label>
+                        <input class="saisie-annee"  id="saisie-date-depart" name="saisie-date-depart" type="date" required minlength="1" maxlength="18" size="5" />
+                      </div>
+                      <div class="checkbox-choix">
+                        <input type="radio" id="choix-date-tx-plein" name="choix-date-age" value="tot" />
+                        <label class="label-choix" for="choix-date-tx-plein">Au taux plein</label>
+                        <input class="saisie-annee"  id="saisie-date-depart-tx-plein" name="saisie-date-depart" type="date" required minlength="1" maxlength="18" size="5" />
+                      </div>
+                      <div class="checkbox">
+                        <input type="radio" id="choix-date-autre" name="choix-date-age" value="autre" />
+                        <label class="label-choix" for="choix-date-autre">Autre</label>
+                        <input class="saisie-annee"  id="saisie-date-depart-libre" name="saisie-date-depart" type="date" required minlength="1" maxlength="18" size="5" title="la date saisie doit être supérieure à la date légale de retraite" alt="la date saisie doit être supérieur à la date légale de retraite" />
+                      </div>                       
+                  </div>
+                </div>
+
+
+                <div id="conteneur-droite-global">
+                  <div id="conteneur-droite-age-legal">
+                    <div id = "conteneur-resultat-age-legal">
+                      <div id="titre-resultat-age">
+                        Age légal de retraite :
+                      </div>
+                      <div class="resultat-age-info" id="resultat-age-legal">
+                        
+                      </div>
+                      <div id="conteneur-info" class="info-age">
+                        <img id="img-info" src="Images\info.png">
+                        <span class="info-span">Age plancher à partir duquel l'assuré peut prendre sa retraite (hors départ anticipé pour carrières longues)</span>
+                      </div>
+                    </div>  
+                    <div id = "conteneur-resultat-age-legal" class="resultat-age-legal">
+                      <div id="vide"> </div>
+                      <div class="resultat-age-info" id="resultat-date-legal">
+                        
+                      </div>
+                    </div>
+                    
+                    <!--<div id = "conteneur-resultat-age">
+                      <div id="titre-resultat-age">
+                        Date :
+                      </div>
+                    </div>-->
+                    
+                    <div id = "conteneur-resultat-age-legal">
+                      <div id="titre-resultat-age">
+                        Nombre de trimestres requis :
+                      </div>
+                      <div class="resultat-age-info" id="resultat-trim-legal">
+                       
+                      </div>
+                      <div id="conteneur-info" class="info-age">
+                        <img id="img-info" src="Images\info.png">
+                        <span class="info-span">Nombre de trimestres nécessaires pour obtenir une retraite à taux plein, c'est-à-dire sans décote.</span>
+                      </div>
+                    </div>
+                    <div id = "conteneur-resultat-age-legal">
+                      <div id="titre-resultat-age">
+                        Age taux plein automatique :
+                      </div>
+                      <div class="resultat-age-info" id="resultat-age-auto">
+                        
+                      </div>
+                      <div id="conteneur-info" class="info-age">
+                        <img id="img-info" src="Images\info.png">
+                        <span class="info-span">Age de départ en retraite à partir duquel la retraite est calculée à taux plein même si le total de trimestres est inférieur au nombre de trimestres requis pour le taux plein.</span>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div id="conteneur-droite-calculatrice-age">
+                    
+                    <div id = "conteneur-resultat-age">
+                      <div id="titre-resultat-age">
+                        Départ en retraite le :
+                      </div>
+                      <div class="resultat-age" id="resultat-date-input">
+                        
+                      </div>
+                    </div>
+                    <div id = "conteneur-resultat-age">
+                      <div id="titre-resultat-age">
+                        Age :
+                      </div>
+                      <div class="resultat-age" id="resultat-age-input">
+                       
+                      </div>
+                    </div>
+                    <div id = "conteneur-resultat-age">
+                      <div id="titre-resultat-age">
+                        Total trimestres validés :
+                      </div>
+                      <div id="resultat-trim-total" class="resultat-age">
+                        
+                      </div>
+                      
+                      <div id="conteneur-info" class="info-age">
+                        <img id="img-info"  src="Images\info.png">
+                        <span class="info-span">En supposant la validation de 4 trimestres par an jusqu'à la date de départ en retraite</span>
+                      </div>
+                    </div>
+                    <div class="sous-texte">
+                      dont <span id="nb-enfant-res">x</span> trimestres pour enfants
+                    </div>
+                    <div id = "conteneur-resultat-age">
+                      <div id="titre-resultat-age">
+                        Trimestres manquants :
+                      </div>
+                      <div id="resultat-trim-manquant" class="resultat-age">
+                        
+                      </div>
+                      <div id="conteneur-info" class="info-age">
+                        <img id="img-info" src="Images\info.png">
+                        <span class="info-span">Nombre de trimestres manquants pour bénéficier de la retraite à taux plein ou atteindre l'âge du taux plein automatique</span>
+                      </div>
+                    </div>
+                    <div id="conteneur-minoration">
+                      <div>
+                        Minoration de la pension :
+                      </div>
+                      <div id = "conteneur-resultat-age">
+                        <div id="titre-resultat-age">
+                          Régime Général :
+                        </div>
+                        <div id="resultat-mino-RG" class="resultat-age-info">
+                          
+                        </div>
+                      </div>
+                      <div id = "conteneur-resultat-age">
+                        <div id="titre-resultat-age">
+                          Agirc-Arrco / Ircantec :
+                        </div>
+                        <div id="resultat-mino-arrco" class="resultat-age-info">
+                          0
+                        </div>
+                      </div>
+                      <div id = "conteneur-resultat-age">
+                        <div id="titre-resultat-age">
+                          CNAVPL :
+                        </div>
+                        <div id="resultat-mino-cnavpl" class="resultat-age-info">
+                          0
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="conteneur-majoration">
+                      <div>
+                        Majoration de la pension :
+                      </div>
+                      <div id = "conteneur-resultat-age">
+                        <div id="titre-resultat-age">
+                          Régime Général :
+                        </div>
+                        <div id="resultat-majo-RG" class="resultat-age-info">
+                          
+                        </div>
+                      </div>
+                      <div id = "conteneur-resultat-age">
+                        <div id="titre-resultat-age">
+                          CNAVPL :
+                        </div>
+                        <div id="resultat-majo-cnavpl" class="resultat-age-info">
+                          
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+
+              </div>
+              
+
+            </div>  
+
+            <!--Calculatrice Trimestre-->
+              <div class="calculette" id="calculette-trim">
+                <div class = "titre-calculatrice">
+                  Calculette Trimestres
+                </div>
+                <div class="info-calculette">
+                Calcul du nombre de trimestres validés en fonction de l'année et du montant du salaire brut limité au Plafond Annuel de la Sécurité Sociale.
+                </div>
+                <div id = "conteneur-calculatrice">
+                  <div id="conteneur-gauche-calculatrice">
+
+                    <div class="conteneur-saisie">
+                      <div class="titre-saisie">
+                        Année :
+                      </div>
+                      <input class="saisie-annee"  id="saisie-annee-trim" name="saisie-annee" required minlength="4" maxlength="4" size="5"  />
+                      <div id="conteneur-info">
+                        <img id="img-info" src="Images\info.png">
+                        <span class="info-span">Données accessibles de 1963 à 2024</span>
+                      </div>
+                    </div>
+
+                    <div class="conteneur-saisie">
+                      <div class="titre-saisie">
+                        Salaire :
+                      </div>
+                      <input id="saisie-salaire" name="saisie-salaire" required minlength="1" maxlength="8" size="5" />
+                  
+                      <div id = "monnaie-symbole-saisie" class="monnaie-symbole">
+                         €
+                      </div>
+
+                      <div id="conteneur-info">
+                        <img id="img-info" src="Images\info.png">
+                        <span class="info-span">Salaire brut annuel limité au Plafond Annuel de la Sécurité Sociale</span>
+                      </div>
+                    </div>
+
+                    <div class="conteneur-saisie">
+                      <div id="conteneur-monnaie">
+                        <div class="checkbox">
+                          <input type="radio" id="euros" name="monnaie" value="euros" checked />
+                          <label for="euros">€</label>
+                        </div>
+                      
+                        <div class="checkbox">
+                          <input type="radio" id="francs" name="monnaie" value="francs" />
+                          <label for="francs">F</label>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div id="conteneur-droite-calculatrice">
+                    <div id = "conteneur-resultat1">
+                      <div id="conteneur-titre-resultat1">
+                        <div>
+                          Nombre de trimestres validés 
+                        </div>
+                        <div id="conteneur-info">
+                          <img id="img-info" src="Images\info.png">
+                          <span class="info-span">Les trimestres sont validés en fonction du salaire brut limité au Plafond Annuel de la Sécurité Sociale, indépendamment de la durée travaillée, dans la limite de 4 trimestres par an.</span>
+                        </div>
+                      </div>
+                      <div id="resultat-trim">
+                        0
+                      </div>
+                    </div>
+                    <div id = "conteneur-resultat2">
+                      <div>
+                        Salaire min. pour valider 1 trimestre :
+                      </div>
+                      <div id="conteneur-valeur-resultat2">
+                        <div id = "resultat-valeur-trim">
+                          0
+                        </div>  
+                        <div id = "monnaie-symbole-resultat">
+                          €
+                        <div>
+
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                  </div>
+                </div>
+              </div>
+
+             <!--Calculatrice Agirc-Arrco-->
+            <div class="calculette" id="calculette-pts">
+              <div class = "titre-calculatrice">
+                Calculette Agirc-Arrco et Ircantec
+              </div>
+              <div class="info-calculette">
+                Calcul du nombre de points en fonction de l'année et du montant du salaire brut cotisé.
+              </div>
+              <div id="choix-arrco-ircantec">
+                <div class="choix-toggle" id="choix-toggle-agirc-arrco" >
+                  Agirc-Arrco
+                </div>
+                <input type="checkbox" id="toggle-arrco" class="checkbox-toggle" >
+                <label class="label" for="toggle-arrco"></label>
+                <div class="choix-toggle" id="choix-toggle-ircantec">
+                  Ircantec
+                </div>
+              </div>
+              <div id = "conteneur-calculatrice">
+                <div id="conteneur-gauche-calculatrice">
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Année :
+                    </div>
+                    <input class="saisie-annee"   id="saisie-annee-arrco" name="saisie-annee-arrco" required minlength="4" maxlength="4" size="5"  />
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Données accessibles de 1963 à 2024</span>
+                    </div>
+                  </div>
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Salaire :
+                    </div>
+                    <input id="saisie-salaire-arrco" name="saisie-salaire-arrco" required minlength="1" maxlength="8" size="5" />
+                    <div id = "monnaie-symbole-saisie-arrco" class="monnaie-symbole">
+                       €
+                    </div>
+
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Salaire brut annuel (si année incomplète, préciser le nombre de mois travaillés ci-dessous)</span>
+                    </div>
+                  </div>
+
+                  <div class="conteneur-saisie">
+                    <div id="conteneur-monnaie">
+                      <div class="checkbox">
+                        <input type="radio" id="euros-arrco" name="monnaie-arrco" value="euros" checked />
+                        <label for="euros-arrco">€</label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="radio" id="francs-arrco" name="monnaie-arrco" value="francs" />
+                        <label for="francs-arrco">F</label>
+                      </div>
+                    </div>      
+                  </div>
+
+                  <div id="titre-nb-mois">
+                    Nombre de mois travaillés :
+                  </div>
+                  <input id="saisie-nb-mois" name="saisie-nb-mois" required minlength="1" maxlength="2" size="5" placeholder="12 max" />
+
+
+                  <div class="conteneur-saisie" id="conteneur-saisie-cadre">   
+                      <div id="titre-statut">
+                        Statut cadre :
+                      </div>
+                      <div class="checkbox" id = "checkbox-cadre">
+                        <input type="radio" id="cadre" name="statut" value="cadre" />
+                        <label id="label-cadre" for="francs">O</label>
+                      </div>
+                      <div class="checkbox" id = "checkbox-cadre">
+                        <input type="radio" id="non-cadre" name="statut" value="non-cadre" checked />
+                        <label id="label-cadre" for="euros">N</label>
+                      </div>  
+                  </div>
+
+                  
+                </div>
+
+                <div id="conteneur-droite-calculatrice">
+                  <div id = "conteneur-resultat1">
+                    <div id="conteneur-titre-resultat1">
+                      <div id="titre-resultat">
+                        Points Agirc-Arrco 
+                      </div>
+                      <div id="conteneur-info">
+                        <img id="img-info" src="Images\info.png">
+                        <span id="contenu-info-res1" class="info-span">Depuis le 01/01/2019, les points ARRCO et les points AGIRC ont fusionné avec la création d'un nouveau régime Agirc-Arrco. Les points acquis avant cette date sont convertis en points Agirc-Arrco.</span>
+                      </div>
+                    </div>
+                    <div id="resultat-agirc-arrco">
+                      0
+                    </div>
+                  </div>
+                  <div id = "conteneur-resultat-ARRCO">
+                    <div>
+                      Détail des points ARRCO et AGIRC pour les années avant 2019 :
+                    </div>
+                    <div id="conteneur-valeur-ARRCO">
+                      <div id = "points-ARRCO">
+                        0
+                      </div> 
+                      <div id = "titre-ARRCO">
+                        points ARRCO
+                      </div>  
+                    </div>
+                    <div id="conteneur-valeur-ARRCO">
+                      <div id = "points-AGIRCTB">
+                        0
+                      </div> 
+                      <div id = "titre-AGIRC">
+                        points AGIRC Tranche B
+                      </div>  
+                    </div>
+                    <div id="conteneur-valeur-ARRCO">
+                      <div id = "points-AGIRCTC">
+                        0
+                      </div> 
+                      <div id = "titre-AGIRC">
+                        points AGIRC Tranche C
+                      </div>  
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+              
+
+            </div>
+
+            <!--Calculatrice CNAVPL-->
+            <div class="calculette" id="calculette-cnavpl">
+              <div class = "titre-calculatrice">
+                Calculette CNAVPL
+              </div>
+              <div class="info-calculette">
+                Calcul du nombre de points du régime de base des professions libérales en fonction de l'année et du montant du revenu brut cotisé.
+              </div>
+              <div id = "conteneur-calculatrice">
+                <div id="conteneur-gauche-calculatrice">
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Année :
+                    </div>
+                    <input class="saisie-annee"  id="saisie-annee-cnavpl" name="saisie-annee" required minlength="4" maxlength="4" size="5"  />
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Données accessibles de 1963 à 2024</span>
+                    </div>
+                  </div>
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Revenu :
+                    </div>
+                    <input id="saisie-salaire-cnavpl" name="saisie-salaire" required minlength="1" maxlength="8" size="5" />
+                
+                    <div id = "monnaie-symbole-saisie-cnavpl" class="monnaie-symbole">
+                       €
+                    </div>
+
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Revenu professionnel annuel soumis à cotisations.</span>
+                    </div>
+                  </div>
+
+                  <div class="conteneur-saisie">
+                    <div id="conteneur-monnaie">
+                      <div class="checkbox">
+                        <input type="radio" id="euros-cnavpl" name="monnaie-cnavpl" value="euros" checked />
+                        <label for="euros-cnavpl">€</label>
+                      </div>
+                    
+                      <div class="checkbox">
+                        <input type="radio" id="francs-cnavpl" name="monnaie-cnavpl" value="francs" />
+                        <label for="francs-cnavpl">F</label>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+
+                <div id="conteneur-droite-calculatrice">
+                  <div id = "conteneur-resultat1">
+                    <div id="conteneur-titre-resultat1">
+                      <div>
+                        Nombre de points CNAVPL
+                      </div>
+                      <div id="conteneur-info">
+                        <img id="img-info" src="Images\info.png">
+                        <span class="info-span">Nombre de points du régime de base des professions libérales CNAVPL. Le résultat n'intègre pas les points acquis auprès du régime complémentaire (CARMF, CARCDSF etc, selon la profession exercée).</span>
+                      </div>
+                    </div>
+                    <div id="resultat-cnavpl">
+                      0
+                    </div>
+                  </div>
+                  
+
+                </div>
+              </div>
+            </div>
+
+            <!--Calculatrice SAM-->
+            <div class="calculette" id = "calculette-sam">
+              <div class = "titre-calculatrice" id="calculette-age-depart">
+                Salaire Annuel Moyen
+              </div>
+              <div class="info-calculette">
+                Calcul du Salaire Annuel Moyen (SAM) sur la base des salaires renseignés
+              </div>
+
+              <div id = "conteneur-calculatrice">
+                <div id="conteneur-gauche-calculatrice-age">
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie-age">
+                     Date de retraite :
+                    </div>
+                    <input class="saisie-annee"   id="saisie-date-retraite-sam" name="saisie-DDN-age" type="date" required minlength="4" maxlength="10" size="2" />
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Données disponibles à partir de 2021</span>
+                    </div>
+                  </div>
+                  <div class="titre-saisie-age" id="titre-enfants">
+                    Renseignez l'historique de salaire année par année :
+                  </div>
+                  
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Année :
+                    </div>
+                    <input class="saisie-annee"  id="saisie-annee-sam" name="saisie-annee" required minlength="4" maxlength="4" size="5"  />
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Renseignez toutes les années comportant un salaire, au maximum jusqu'à l'année précédant la date de retraite.</span>
+                    </div>
+                  </div>
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Revenu :
+                    </div>
+                    <input id="saisie-salaire-sam" name="saisie-salaire" required minlength="1" maxlength="8" size="5" />
+                
+                    <div id = "monnaie-symbole-saisie-sam" class="monnaie-symbole">
+                       €
+                    </div>
+
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Renseignez le salaire brut limité au plafond annuel de la Sécurité Sociale (disponible sur le relevé de carrière de l'Assurance Retraite) </span>
+                    </div>
+                  </div>
+
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Trimestres :
+                    </div>
+                    <input id="saisie-trim-sam" name="saisie-salaire" required minlength="1" maxlength="8" size="5" />
+
+                    <div id="conteneur-info">
+                      <img id="img-info" src="Images\info.png">
+                      <span class="info-span">Si le salaire est insuffisant pour valider au moins 1 trimestre, il n'est pas retenu pour le calcul du SAM.</span>
+                    </div>
+                
+                  </div>
+                  
+                  <button id="bouton-salaire-sam">Année suivante</button>
+
+                  <button id="bouton-reinitialiser">Réinitialiser</button>
+
+                </div>
+                <div id="conteneur-droite-calculatrice">
+                  <div class="conteneur-saisie">
+                    <div class="titre-saisie">
+                      Salaire Annuel Moyen :
+                    </div>
+                    <div id="resultat-sam">
+                      0
+                    </div>
+                    <div id = "monnaie-symbole-resultat-sam" class="monnaie-symbole">
+                      €
+                   </div>
+                
+                  </div>
+
+                  <div class="conteneur-table-calcul-sam"  id="conteneur-table-calcul-sam">
+                    
+                  </div>
+
+                </div>
+              </div>   
+
+            </div>
+
+         </div>
+
+         <!--BLOC VIDE-->
+         <div class="bloc-vide-calculettes">
+           
+         </div>
+
+         <!--HISTORIQUES-->
+         <div class="titre-regime" id="titre-bloc-historique">
+          Historique des données
+         </div>
+         
+         <div class="conteneur-table-historique" id="conteneur-table-age">
+            <div id="titre-table-age" class = "titre-table">
+            Age légal et durée d'assurance
+            </div>
+         </div>
+
+         <div class="conteneur-table-historique"  id="conteneur-table-sam">
+            <div id="titre-table-sam" class = "titre-table">
+            Nombre d'années SAM et RAM
+            </div>
+         </div>
+
+         <div class="conteneur-table-historique"  id="conteneur-table-decote">
+            <div id="titre-table-decote" class = "titre-table">
+            Decote Régime Général
+            </div>
+         </div>
+
+         <div class="conteneur-table-historique"  id="conteneur-table-tx-appel-arrco">
+            <div id="titre-table-tx-appel-arrco" class = "titre-table">
+            Taux d'appel Arrco et Agirc
+            </div>
+        </div>
+
+        <div class="conteneur-table-historique"  id="conteneur-table-revalo">
+          <div id="titre-table-revalo" class = "titre-table">
+          Taux de revalorisation des salaires
+          </div>
+        </div>
+          
+         <!--BLOC VIDE-->
+         <div class="bloc-vide-historique">
+           
+         </div>
+        
+
+        </div>
+
+
+    </div>
+
+    <script defer="defer" src="utiles.js">  </script>
+    <script defer="defer" src="script.js">  </script>
+  </body>
+  
+  </html>
+
+</html>
