@@ -367,6 +367,10 @@ function RemplirTabSalaires (dateDep, annee, salaire, nbTrim) {
         tabSalairesSam[indAnnee] = [annee, salaire, salaireRevalo];
     }   
     
+    //tri du tableau par années croissantes
+    tabSalairesSam = TriFusion (tabSalairesSam);
+    
+
     return tabSalairesSam;
 }
 
@@ -405,7 +409,7 @@ function Fusion(tabG, tabD) {  //avec tabG et tabD déjà triés
     let longD = tabD.length;
     let tabFinal = new Array;
     while ((indG < longG) && (indD < longD)) {
-        if (tabG[indG] < tabD[indD]) {
+        if (CompareAnnees(tabG[indG], tabD[indD])) {          // init tabG[indG] < tabD[indD]
             tabFinal[i] = tabG[indG];
             indG = indG + 1;
         }
@@ -433,70 +437,17 @@ function Fusion(tabG, tabD) {  //avec tabG et tabD déjà triés
     return tabFinal;
 }
 
-function TriQuickSort (tab)  {
-    let tabG = new Array;
-    let tabD = new Array;
-    let tabFinal = new Array;
-    let longTab = tab.lenght;
-    let pivot = tab[longTab - 1];
-    let sep = 0; //indice de la separation entre les plus petits que le pivot et les plus grands
-    
-    if (longTab > 2) {
-        for (i = 0; i < longTab - 1; i++) {
-            if (tab[i] <= pivot) {
-                if (i = sep) {   //si le nombre plus petit est juste après la séparation, il faut juste avancer la séparation
-                    sep = sep + 1;
-                }
-                else {
-                    let echange = tab[i];
-                    tab [i] = tab [i - 1];
-                    tab [i - 1] = echange;
-                    sep = sep + 1; 
-                }
-            }
-        }
-        
-        //tab avec les éléments de la partie gauche de la séparation
-        for (i = 0; i < sep; i++) {
-            tabG[i] = tab [i];
-        }
-        tabG[sep] = pivot;
-    
-        //tab avec les éléments de la partie droite de la séparation
-        for (i = 0; i < longTab - 1 - tabG.length; i++) {
-            tabD[i] = tab [sep + i];
-        }
-
-        tabG = TriQuickSort (tabG);
-        tabD = TriQuickSort (tabD);
-        tabFinal = Coller (tabG, tabD);
-
+//fonction pour comparer les années de 2 lignes du tableau tabSalaireSam
+function CompareAnnees (ligne1, ligne2) {
+    if (ligne1[0] == "Année") {  //la première ligne du tableau contient les en-têtes de colonne
+        return true;
     }
-    else {
-        if (tab[0] > pivot) {
-            let echange = tab[0];
-            tab [0] = tab [1];
-            tab [1] = echange; 
-        }
-        tabFinal = tab;
+    if (ligne1[0] < ligne2[0]) {
+        return true;
     }
+    else return false;
 }
 
-function Coller (tabG, tabD) {
-    let tabFinal = new Array;
-    let longTabFinal = tabG.lenght + tabD.lenght;
-    let k = 0;
-    for (i = 0; i < longTabFinal; i++) {
-        if (i < tabG.length) {
-            tabFinal[i] = tabG [i];
-        }
-        else {
-            tabFinal[i] = tabD [k];
-            k = k + 1;
-        }
-    }
-    return tabFinal;
-}
 
 //calcul du sam d'après valeurs du tableau
 function SAM (tabSalairesSam) {

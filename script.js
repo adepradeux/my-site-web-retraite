@@ -1011,10 +1011,13 @@ function reinitSam () {
     saisieAnneeSam.value = "";
 
     //TEST tri fusion - tri Quick sort
-    let tab = [1, 8, 12, 4, 10];
+    let tab = [8, 1];
     let tabTest = new Array;
-    tabTest = TriFusion (tab, tabTest);
-    console.log ("test tri fusion ", tabTest);
+    let indD = 0;
+    let indF = tab.length - 1;
+    tabTest = TriQuickSort(tab, indD, indF);
+    //tabTest = TriFusion (tab, tabTest);
+    //console.log ("test tri fusion ", tabTest);
 }
 
 function calculNbTrimSam () {

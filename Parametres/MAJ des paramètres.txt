@@ -1,0 +1,4 @@
+INFOS POUR LA MAJ des données
+- fichiers à MAJ annuellement : Param_historique_revalo 
+				Param_points
+				param_trim
